@@ -1,0 +1,10 @@
+.plugin-gridster.DuinoRemote .front {
+  background: #00979c;
+  border-radius: 6px;
+  border: 5px solid #EEE;
+}
+
+.plugin-gridster.DuinoRemote .logo {
+	position: relative;
+	top: 35px;
+}
