@@ -1,5 +1,5 @@
-﻿<grammar version="1.0" xml:lang="fr-FR" mode="voice"  root="ruleDuinoRemote" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
-  <rule id="ruleDuinoRemote" scope="public">
+﻿<grammar version="1.0" xml:lang="fr-FR" mode="voice"  root="ruleDuinoRemote3" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleDuinoRemote3" scope="public">
     <tag>out.action=new Object(); </tag>
     <item>Sarah</item> 
     <one-of>
@@ -13,6 +13,6 @@
         <tag>out.action.cmd="OFF";  out.action.tts="la led est eteinte";  </tag>        
       </item>
     </one-of>
-    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/DuinoRemote";</tag>
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/DuinoRemote3";</tag>
   </rule>
 </grammar>

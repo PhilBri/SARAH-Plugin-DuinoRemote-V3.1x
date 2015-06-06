@@ -4,7 +4,7 @@ exports.init = function ( SARAH ) {
   var config = SARAH.ConfigManager.getConfig();
   var serial = require("./serialport"),
       SerialPort = serial.SerialPort,
-      portName = config.modules.DuinoRemote.Port;
+      portName = config.modules.DuinoRemote3.Port;
   if (!portName) return console.log('[ERROR] Plugin DuinoRemote: Undefined COM Port...');
 
   serialPort = new SerialPort(portName, {
