@@ -13,10 +13,10 @@ void loop() {
   if (Serial.available()>0) {
     ledState = digitalRead(ledPin);
     myOrder = Serial.readString();
-      if (myOrder=="ON" && ledState==0) {
-        digitalWrite(ledPin, HIGH);
-      } else if (myOrder=="OFF" && ledState==1){
+      if (myOrder=="ON" && ledState==1) {
         digitalWrite(ledPin, LOW);
+      } else if (myOrder=="OFF" && ledState==0){
+        digitalWrite(ledPin, HIGH);
       }
     Serial.println(digitalRead(ledPin));    
   }

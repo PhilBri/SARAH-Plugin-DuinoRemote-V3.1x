@@ -1,0 +1,18 @@
+﻿<grammar version="1.0" xml:lang="fr-FR" mode="voice"  root="ruleDuinoRemote" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleDuinoRemote" scope="public">
+    <tag>out.action=new Object(); </tag>
+    <item>Sarah</item> 
+    <one-of>
+      <item>Quel est l'état de la led
+        <tag>out.action.cmd="?";  out.action.tts="la led est %";  </tag>        
+      </item>
+      <item>Allume la led
+        <tag>out.action.cmd="ON";  out.action.tts="la led est allumée";  </tag>        
+      </item>
+      <item>éteind la led
+        <tag>out.action.cmd="OFF";  out.action.tts="la led est eteinte";  </tag>        
+      </item>
+    </one-of>
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/DuinoRemote";</tag>
+  </rule>
+</grammar>
