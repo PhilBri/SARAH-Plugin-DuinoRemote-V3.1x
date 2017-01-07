@@ -1,12 +1,12 @@
 var serialPort = {}, ledState;
 
 exports.init = function ( SARAH ) {
-  console.log ('[INFO] Plugin DuinoRemote is initializing ...');
-
-  var config = SARAH.ConfigManager.getConfig();
-  var serial = require ("serialport"),
+  var config = SARAH.ConfigManager.getConfig(),
+      serial = require ("serialport"),
       SerialPort = serial.SerialPort,
       portName = config.modules.DuinoRemote.Port;
+
+  console.log ('[INFO] Plugin DuinoRemote is initializing ...');
   if (!portName) return console.log ('[ERROR] Plugin DuinoRemote: Undefined COM Port...');
 
   serialPort = new SerialPort (portName, {
