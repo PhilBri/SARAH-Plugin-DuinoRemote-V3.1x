@@ -1,6 +1,7 @@
-var serialPort = {}, ledState;
+var serialPort = {},
+    ledState;
 
-exports.init = function ( SARAH ) {
+exports.init = function (SARAH) {
   var config = SARAH.ConfigManager.getConfig(),
       serial = require ("serialport"),
       SerialPort = serial.SerialPort,
@@ -21,11 +22,11 @@ exports.init = function ( SARAH ) {
   });
 }
 
-exports.action = function(data, callback, config){
+exports.action = function (data, callback, config) {
   
   data.cmd == '?' && ledState != 0 ? data.tts=data.tts.replace ('%','éteinte') : data.tts=data.tts.replace ('%', 'allumée');
 
-  serialPort.write (data.cmd, function (err ,byteWritten){
+  serialPort.write (data.cmd, function (err ,byteWritten) {
     if (err) console.log ('[ERROR] Plugin DuinoRemote: ' + err);
     console.log ("[INFO] Plugin DuinoRemote: Command = " + data.cmd + " (Sending " + byteWritten + " bytes)");
   });
