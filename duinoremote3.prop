@@ -1,9 +1,0 @@
-{
-  "modules" : { 
-    "DuinoRemote3"  : {
-      "description": "Demo communication arduino.",
-      "version": "0.1",
-      "Port": ""
-    }
-  }
-}
